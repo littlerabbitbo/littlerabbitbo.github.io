@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><!-- vista previa para Brunella: sacar al lanzar al público (con testimonios reales) -->
+<title>Little Rabbit · Juguetes didácticos</title>
+<meta name="description" content="Juguetes didácticos en Santa Cruz, Bolivia. Juega, aprende, crece. Envíos a toda Bolivia.">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rosa:#EF7FA0; --rosa-osc:#D9587F; --rosa-claro:#FDE8EF; --rosa-borde:#F7C6D4;
+  --verde:#7DAE4B; --verde-osc:#5C8C30; --verde-claro:#EDF5E3;
+  --durazno:#F5A97F; --durazno-claro:#FDEEE4;
+  --crema:#FFFAF6; --blanco:#FFFFFF; --texto:#4A3F46; --suave:#8B7F86; --linea:#F1E4E8;
+  --wpp:#25D366; --sombra:0 6px 24px rgba(217,88,127,.12);
+  --radio:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;background:var(--crema);color:var(--texto);line-height:1.5;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.fredoka{font-family:Fredoka,Nunito,sans-serif;font-weight:600;line-height:1.15}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* modo fiesta: oferta de 10 minutos para clientes que ya pagaron */
+body.fiesta{--crema:#FFFBEA;--arco:linear-gradient(90deg,#FF4D8D,#FF9F1C,#FFD23F,#3DD598,#35B7F5,#9B6BFF,#FF4D8D)}
+@keyframes mueve{to{background-position:200% 0}}
+@keyframes mueve2{to{background-position:0 0,200% 0}}
+body.fiesta .carrito-btn{color:#fff}
+.fiesta-barra,body.fiesta .topbar,body.fiesta .btn-rosa,body.fiesta .card .badge,body.fiesta .carrito-btn{background:var(--arco);background-size:200% 100%;animation:mueve 6s linear infinite;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+body.fiesta header{border-bottom:4px solid transparent;border-image:var(--arco) 1}
+body.fiesta .card{border:3px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--arco) border-box;background-size:auto,200% 100%;animation:mueve2 6s linear infinite}
+.fiesta-barra{color:#fff;font-weight:800}
+.fiesta-barra[hidden]{display:none}
+.fiesta-barra .wrap{display:flex;align-items:center;justify-content:center;gap:10px 18px;flex-wrap:wrap;padding:8px 20px;font-size:.95rem}
+.fiesta-barra .elige{display:flex;align-items:center;gap:8px}
+.fiesta-barra button{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.25);color:#fff;font-weight:800;font-size:1.15rem}
+.fiesta-barra button:hover{background:rgba(255,255,255,.4)}
+.fiesta-barra .pct{font-family:Fredoka;font-size:1.35rem;min-width:52px;text-align:center}
+.fiesta-barra .reloj{background:rgba(0,0,0,.2);border-radius:99px;padding:3px 12px;font-variant-numeric:tabular-nums}
+.checkout.fiesta-pagina{max-width:520px;margin:44px auto;text-align:center;border-radius:var(--radio);box-shadow:var(--sombra);padding:32px 24px;border:4px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#FF4D8D,#FF9F1C,#FFD23F,#3DD598,#35B7F5,#9B6BFF) border-box}
+.fiesta-pagina .grande{font-size:3.2rem;line-height:1;margin-bottom:10px}
+.fiesta-pagina .campo{text-align:left;margin-top:18px}
+.fiesta-pagina .prueba{display:block;margin-top:12px;font-size:.8rem;color:var(--suave)}
+.confeti{position:fixed;top:-30px;font-size:1.6rem;z-index:90;pointer-events:none;animation:caer 3s linear forwards}
+@keyframes caer{to{transform:translateY(112vh) rotate(540deg);opacity:.5}}
+
+/* barra superior */
+.topbar{background:var(--verde);color:#fff;font-size:.85rem;font-weight:700;text-align:center;padding:7px 16px}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(255,250,246,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
+.head{display:flex;align-items:center;gap:18px;height:76px}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo img{width:58px;height:58px;border-radius:50%;border:2px solid var(--rosa-borde)}
+.logo b{font-family:Fredoka;font-size:1.35rem;line-height:1}
+.logo b span{display:block;color:var(--verde)} .logo b em{font-style:normal;color:var(--rosa-osc)}
+.buscar{flex:1;max-width:420px;position:relative}
+.buscar input{width:100%;height:44px;border-radius:99px;border:2px solid var(--linea);background:#fff;padding:0 16px 0 42px;font:inherit;color:var(--texto);outline:none}
+.buscar input:focus{border-color:var(--rosa-borde)}
+.buscar svg{position:absolute;left:14px;top:12px;width:20px;height:20px;color:var(--suave)}
+.carrito-btn{margin-left:auto;position:relative;width:48px;height:48px;border-radius:50%;background:var(--rosa-claro);display:grid;place-items:center;color:var(--rosa-osc)}
+.carrito-btn svg{width:24px;height:24px}
+.carrito-btn .num{position:absolute;top:-2px;right:-2px;min-width:22px;height:22px;border-radius:99px;background:var(--rosa-osc);color:#fff;font-size:.75rem;font-weight:800;display:grid;place-items:center;padding:0 5px;border:2px solid var(--crema)}
+.carrito-btn .num[data-n="0"]{display:none}
+nav.menu{display:flex;gap:6px;overflow-x:auto;padding:0 0 12px;scrollbar-width:none}
+nav.menu::-webkit-scrollbar{display:none}
+nav.menu a{white-space:nowrap;padding:8px 16px;border-radius:99px;font-weight:700;font-size:.95rem;color:var(--suave)}
+nav.menu a:hover{background:var(--rosa-claro);color:var(--rosa-osc)}
+nav.menu a.activo{background:var(--rosa);color:#fff}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:48px 0 56px}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);color:var(--texto)}
+.hero h1 em{font-style:normal;color:var(--rosa-osc)}
+.hero h1 span{color:var(--verde)}
+.hero p{font-size:1.15rem;color:var(--suave);margin:16px 0 26px;max-width:480px}
+.beneficios{list-style:none;margin:20px 0 26px;display:grid;gap:9px}
+.beneficios li{font-size:1.08rem;font-weight:700;color:var(--texto);background:#fff;border:1px solid var(--linea);border-radius:14px;padding:9px 14px;width:fit-content}
+.lema{display:inline-flex;gap:8px;align-items:center;background:var(--verde-claro);color:var(--verde-osc);font-weight:800;font-size:.85rem;padding:6px 14px;border-radius:99px;margin-bottom:16px;letter-spacing:.04em}
+.hero-img{width:100%;max-width:440px;justify-self:center;border-radius:28px;overflow:hidden;box-shadow:var(--sombra);transform:rotate(1.5deg);border:6px solid #fff}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.confianza{display:flex;flex-wrap:wrap;gap:18px;margin-top:28px;color:var(--suave);font-weight:700;font-size:.9rem}
+
+/* botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;height:50px;padding:0 26px;border-radius:99px;font-weight:800;font-size:1rem;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.97)}
+.btn-rosa{background:var(--rosa);color:#fff} .btn-rosa:hover{background:var(--rosa-osc)}
+.btn-verde{background:var(--verde);color:#fff} .btn-verde:hover{background:var(--verde-osc)}
+.btn-borde{border:2px solid var(--rosa-borde);color:var(--rosa-osc);background:#fff}
+.btn-wpp{background:var(--wpp);color:#fff}
+.btn svg{width:20px;height:20px}
+.btn[disabled]{opacity:.5;pointer-events:none}
+
+/* secciones */
+section{padding:56px 0;scroll-margin-top:110px}
+.titulo{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+.titulo h2{font-size:clamp(1.7rem,3.4vw,2.3rem)}
+.titulo p{color:var(--suave);margin-top:6px}
+.titulo a{font-weight:800;color:var(--rosa-osc)}
+
+/* grilla de productos */
+.grilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px}
+.card{background:#fff;border-radius:var(--radio);overflow:hidden;box-shadow:0 2px 10px rgba(74,63,70,.06);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;border:1px solid var(--linea)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--sombra)}
+.card .foto{position:relative;aspect-ratio:1237/1380;background:#fff;cursor:pointer;overflow:hidden}
+.card .foto img{width:100%;height:100%;object-fit:cover;object-position:top}
+.badge{position:absolute;top:12px;left:12px;background:var(--rosa-osc);color:#fff;font-weight:800;font-size:.8rem;padding:5px 11px;border-radius:99px}
+.edad{display:inline-block;font-size:.75rem;font-weight:800;padding:3px 10px;border-radius:99px;background:var(--verde-claro);color:var(--verde-osc)}
+.edad[data-e="0-3"]{background:var(--rosa-claro);color:var(--rosa-osc)}
+.edad[data-e="8-12"]{background:var(--durazno-claro);color:#C0683A}
+.card .info{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:1.15rem;cursor:pointer}
+.card .desc{color:var(--suave);font-size:.92rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.precio{display:flex;align-items:baseline;gap:10px;margin-top:auto;padding-top:6px}
+.precio b{font-family:Fredoka;font-size:1.5rem;color:var(--texto)}
+.precio s{color:var(--suave);font-weight:700}
+.acciones{display:flex;gap:8px}
+.acciones .btn{height:46px;flex:1;padding:0 14px;font-size:.95rem}
+.acciones .btn-wpp{flex:0 0 46px;padding:0}
+.vacio{text-align:center;padding:60px 20px;color:var(--suave);font-weight:700}
+
+/* edades */
+.edades{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.edad-card{position:relative;border-radius:28px;padding:30px 26px 26px;overflow:hidden;min-height:230px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .2s}
+.edad-card:hover{transform:translateY(-4px)}
+.edad-card .orejas{position:absolute;top:-18px;right:22px;width:120px;opacity:.9}
+.edad-card h3{font-size:2.4rem}
+.edad-card p{font-weight:700;opacity:.85;margin:4px 0 14px}
+.edad-card .ir{font-weight:800}
+.e03{background:var(--rosa-claro);color:var(--rosa-osc)}
+.e46{background:var(--verde-claro);color:var(--verde-osc)}
+.e79{background:var(--durazno-claro);color:#C0683A}
+
+/* habilidades */
+.habilidades{display:flex;flex-wrap:wrap;gap:12px}
+.habilidades a{background:var(--crema);border:2px solid var(--linea);padding:10px 18px;border-radius:99px;font-weight:700;transition:border-color .15s,color .15s}
+.habilidades a:hover,.habilidades a.on{border-color:var(--rosa-borde);color:var(--rosa-osc)}
+.marquesina{overflow:hidden;padding:10px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.pista{display:flex;width:max-content;animation:desliza 60s linear infinite}
+.marquesina:hover .pista{animation-play-state:paused}
+.testi{flex:none;width:clamp(150px,22vw,200px);margin:0 16px 0 0;border-radius:18px;overflow:hidden;background:#fff;box-shadow:var(--sombra)}
+.testi img{display:block;width:100%;height:auto}
+@keyframes desliza{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.pista{animation:none}.marquesina{overflow-x:auto}}
+.ver-mas{text-align:center;margin-top:22px}
+.chips-legos{margin:18px 0 6px}
+.linea-lego{padding-top:28px}
+.linea-lego h2{font-size:1.4rem;margin-bottom:14px}
+.linea-lego h2 small{font-size:.8rem;font-weight:700;color:var(--suave);margin-left:6px}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.cat{display:inline-block;font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:99px;background:var(--crema);border:1px solid var(--linea);color:var(--suave)}
+.cat:hover{color:var(--rosa-osc);border-color:var(--rosa-borde)}
+.red svg{width:20px;height:20px}
+.pie a.red-pie{display:flex;align-items:center;gap:8px}
+.red-pie svg{width:18px;height:18px;flex-shrink:0}
+
+/* sobre ella */
+.sobre{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.sobre-completa{align-items:start}
+.sobre-completa .sobre-foto{position:sticky;top:150px}
+.volver{display:inline-block;margin:18px 0 8px;color:var(--suave);font-weight:600}
+.sobre-foto{aspect-ratio:1;border-radius:50%;overflow:hidden;border:8px solid var(--rosa-claro);max-width:360px;justify-self:center;width:100%;background:#fff}
+.sobre-foto img{width:100%;height:100%;object-fit:cover}
+.ubicacion{display:flex;gap:12px;align-items:center;margin:8px 0 18px;max-width:460px}
+.ubi-icono{flex:none;font-size:1.6rem;line-height:1}
+.ubicacion div{display:flex;flex-direction:column;line-height:1.3;min-width:0}
+.ubicacion b{font-size:1.2rem}
+.tienda-foto{aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:var(--rosa-claro);box-shadow:var(--sombra);width:100%}
+.tienda-foto img{width:100%;height:100%;object-fit:cover}
+.tienda-foto.vacia{display:grid;place-content:center;text-align:center;color:var(--suave);font-weight:700;line-height:1.8}
+.tienda-foto.vacia span{font-size:1.05rem}
+/* mientras no esté la foto de Brunella va el logo, a su tamaño real para que no se pixele */
+.sobre-foto.es-logo{border:0;background:none;max-width:280px;box-shadow:var(--sombra)}
+.sobre-foto.es-logo img{object-fit:contain}
+.sobre h2{font-size:clamp(1.8rem,3.6vw,2.5rem);margin-bottom:14px}
+.sobre p{color:var(--suave);font-size:1.08rem;margin-bottom:12px;max-width:620px}
+.sobre h3{font-size:1.25rem;margin:22px 0 8px}
+.sobre-intro{font-size:1.2rem!important;font-style:italic}
+.sobre-firma{margin-top:18px}
+.sobre-lema{color:var(--rojo,inherit)}
+.sobre-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+
+/* agotados y libros */
+.card.agotada .foto img,.detalle.agotada .foto img{filter:grayscale(.85);opacity:.6}
+.badge-agotado{background:var(--suave)}
+.btn-gris{background:var(--linea);color:var(--suave);cursor:not-allowed}
+.edad[data-e="libro"]{background:#EEE8F7;color:#7A5BA6}
+.edad[data-e="agotado"]{background:var(--linea);color:var(--suave)}
+.libro-emoji{position:absolute;top:18px;right:24px;font-size:3.2rem;opacity:.9}
+
+/* banner de página por edad */
+.cabecera-edad{border-radius:28px;padding:36px 32px;margin:32px 0 8px}
+.cabecera-edad h1{font-size:clamp(2rem,4vw,2.8rem)}
+.cabecera-edad p{font-weight:700;opacity:.85;margin-top:6px}
+
+/* footer */
+footer{background:#fff;border-top:1px solid var(--linea);padding:44px 0 90px;margin-top:40px}
+.pie{display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
+.pie h4{font-family:Fredoka;font-size:1.1rem;margin-bottom:10px}
+.pie a,.pie p{display:block;color:var(--suave);font-weight:600;margin-bottom:6px}
+.pie a:hover{color:var(--rosa-osc)}
+
+/* WhatsApp flotante */
+.wpp-flot{position:fixed;right:20px;bottom:20px;z-index:45;width:60px;height:60px;border-radius:50%;background:var(--wpp);display:grid;place-items:center;box-shadow:0 8px 24px rgba(37,211,102,.4);color:#fff}
+.wpp-flot svg{width:32px;height:32px}
+
+/* panel del carrito */
+.capa{position:fixed;inset:0;background:rgba(74,63,70,.45);z-index:60;opacity:0;pointer-events:none;transition:opacity .25s}
+.capa.abierta{opacity:1;pointer-events:auto}
+.panel{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--crema);z-index:70;transform:translateX(100%);transition:transform .3s ease;display:flex;flex-direction:column}
+.panel.abierto{transform:none}
+.panel-head{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--linea)}
+.panel-head h3{font-size:1.4rem}
+.cerrar{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:1.4rem;color:var(--suave)}
+.panel-body{flex:1;overflow-y:auto;padding:18px 22px}
+.panel-foot{padding:18px 22px 22px;border-top:1px solid var(--linea);background:#fff}
+.item{display:flex;gap:14px;background:#fff;border-radius:16px;padding:10px;margin-bottom:12px;border:1px solid var(--linea)}
+.item img{width:76px;height:84px;object-fit:cover;object-position:top;border-radius:12px}
+.item .dt{flex:1;display:flex;flex-direction:column;gap:6px}
+.item h4{font-family:Fredoka;font-weight:600;font-size:1rem;line-height:1.2}
+.item .fila{display:flex;align-items:center;justify-content:space-between}
+.cant{display:flex;align-items:center;border:2px solid var(--linea);border-radius:99px}
+.cant button{width:30px;height:30px;font-weight:800;color:var(--rosa-osc)}
+.cant span{min-width:22px;text-align:center;font-weight:800}
+.quitar{font-size:.8rem;color:var(--suave);font-weight:700;text-decoration:underline}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.total b{font-family:Fredoka;font-size:1.6rem}
+.panel-foot .btn{width:100%}
+.nota{font-size:.82rem;color:var(--suave);text-align:center;margin-top:10px}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;pointer-events:none;opacity:0;transition:opacity .2s}
+.modal.abierto{pointer-events:auto;opacity:1}
+.modal-caja{background:var(--crema);border-radius:26px;width:min(860px,100%);max-height:92vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.modal-caja .cerrar{position:absolute;top:14px;right:14px;z-index:2}
+.detalle{display:grid;grid-template-columns:1fr 1fr}
+.detalle .foto{background:#fff}
+.detalle .foto img{width:100%;aspect-ratio:1237/1380;object-fit:cover;object-position:top}
+.miniaturas{display:flex;gap:10px;padding:12px}
+.mini{width:72px;height:72px;padding:0;border:2px solid transparent;border-radius:12px;overflow:hidden;background:#fff;cursor:pointer}
+.mini.activa{border-color:var(--rosa,#e8739a)}
+.detalle .miniaturas img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center}
+.detalle .info{padding:34px 30px;display:flex;flex-direction:column;gap:12px}
+.detalle h2{font-size:1.9rem}
+.detalle .desc{color:var(--suave);font-size:1.02rem}
+.detalle .precio b{font-size:2rem}
+.detalle .btn{width:100%}
+
+/* checkout */
+.checkout{padding:30px 28px;max-width:560px;margin:0 auto}
+.pasos{display:flex;gap:8px;margin-bottom:20px}
+.pasos span{flex:1;height:6px;border-radius:99px;background:var(--linea)}
+.pasos span.on{background:var(--rosa)}
+.checkout h2{font-size:1.7rem;margin-bottom:4px}
+.checkout .sub{color:var(--suave);margin-bottom:20px}
+.campo{margin-bottom:14px}
+.campo label{display:block;font-weight:800;font-size:.9rem;margin-bottom:6px}
+.campo input,.campo select,.campo textarea{width:100%;height:48px;border-radius:14px;border:2px solid var(--linea);background:#fff;padding:0 14px;font:inherit;color:var(--texto);outline:none}
+.ayuda{display:block;font-size:.8rem;color:var(--suave);margin-top:5px;font-weight:600}
+.ayuda.bien{color:var(--verde-osc)}
+.campo textarea{height:76px;padding:12px 14px;resize:none}
+.campo input:focus,.campo select:focus,.campo textarea:focus{border-color:var(--rosa-borde)}
+.campo.error input,.campo.error select{border-color:#E0605A}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.resumen{background:#fff;border-radius:16px;padding:14px 16px;border:1px solid var(--linea);margin-bottom:18px;font-size:.95rem}
+.resumen div{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
+.resumen .tot{border-top:1px dashed var(--linea);margin-top:6px;padding-top:8px;font-weight:800;font-size:1.05rem}
+.qr{background:#fff;border-radius:20px;border:2px dashed var(--rosa-borde);padding:18px;text-align:center;margin-bottom:18px}
+.qr img{width:min(260px,100%);height:auto;margin:0 auto;border-radius:12px}
+.qr .sinqr{width:220px;height:220px;margin:0 auto;border-radius:14px;background:var(--rosa-claro);display:grid;place-items:center;color:var(--rosa-osc);font-weight:800;padding:20px}
+.pasos-pago{list-style:none;counter-reset:p;margin-bottom:18px}
+.pasos-pago li{counter-increment:p;display:flex;gap:10px;margin-bottom:8px;font-weight:600}
+.pasos-pago li::before{content:counter(p);flex:0 0 26px;height:26px;border-radius:50%;background:var(--verde);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.85rem}
+.volver{display:block;margin:12px auto 0;color:var(--suave);font-weight:700;text-decoration:underline}
+.gracias{text-align:center;padding:40px 28px}
+.gracias .grande{display:flex;align-items:center;justify-content:center;gap:10px;font-size:2.6rem;margin-bottom:6px}
+.gracias .grande img{width:120px;height:120px;border-radius:50%}
+.entrega{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.entrega .op{position:relative;cursor:pointer}
+.entrega input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.entrega span{display:block;text-align:center;font-weight:800;padding:13px 8px;border:2px solid var(--linea);border-radius:14px;background:#fff;transition:.15s}
+.entrega input:checked+span{border-color:var(--rosa);background:var(--rosa-claro);color:var(--rosa-osc)}
+.aviso-tienda{background:var(--verde-claro);color:var(--verde-osc);border-radius:14px;padding:12px 14px;margin-bottom:14px;font-weight:600;font-size:.95rem}
+.aviso-tienda[hidden],.campo[hidden]{display:none}
+
+/* aviso */
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--texto);color:#fff;padding:12px 20px;border-radius:99px;font-weight:700;z-index:90;transition:transform .3s;white-space:nowrap}
+.toast.ver{transform:translate(-50%,0)}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;padding:28px 0 40px;gap:28px}
+  .hero-img{max-width:420px;margin:0 auto;transform:none}
+  .edades{grid-template-columns:1fr}
+  .sobre{grid-template-columns:1fr;gap:24px}
+  .sobre-foto{max-width:220px}
+  .sobre p{margin-left:auto;margin-right:auto}
+  .edad-card{min-height:170px}
+  .detalle{grid-template-columns:1fr}
+  .pie{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .head{height:68px;gap:10px}
+  .logo img{width:48px;height:48px}
+  .logo b{display:none}
+  .buscar input{height:42px}
+  .grilla{grid-template-columns:repeat(2,1fr);gap:12px}
+  .card .info{padding:12px}
+  .card h3{font-size:1rem}
+  .card .desc{display:none}
+  .precio b{font-size:1.2rem}
+  .precio s{font-size:.85rem}
+  .acciones .btn{height:42px;font-size:.85rem;padding:0 8px}
+  .acciones .btn-wpp{flex:0 0 42px}
+  .acciones .btn .txt-largo{display:none}
+  section{padding:40px 0}
+  .dos{grid-template-columns:1fr}
+  .checkout{padding:26px 18px}
+  .detalle .info{padding:24px 20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="head">
+      <a href="#/" class="logo" aria-label="Little Rabbit, inicio">
+        <img src="img/logo.png" alt="Logo de Little Rabbit">
+        <b><span>Little</span><em>Rabbit</em></b>
+      </a>
+      <label class="buscar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="buscar" type="search" placeholder="Buscar juguetes..." autocomplete="off">
+      </label>
+      <button class="carrito-btn" id="abrirCarrito" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
+        <span class="num" id="numCarrito" data-n="0">0</span>
+      </button>
+    </div>
+    <nav class="menu" id="menu">
+      <a href="#/" data-ruta="inicio">Inicio</a>
+      <a href="#ofertas-del-mes" data-ruta="ofertas">🎁 Ofertas del mes</a>
+      <a href="#por-edad" data-ruta="por-edad">🎂 Por edades</a>
+      <a href="#categorias" data-ruta="categorias">🧩 Por categorías</a>
+      <a href="#libros" data-ruta="libros">📚 Libros</a>
+      <a href="#legos" data-ruta="legos">🧱 Legos</a>
+      <a href="#/todos" data-ruta="todos">🧸 Todos</a>
+      <a href="#sobre-mi" data-ruta="sobre-mi">💗 Sobre mí</a>    </nav>
+  </div>
+  <div class="fiesta-barra" id="fiestaBarra" hidden></div>
+</header>
+
+<main id="app"></main>
+
+<footer>
+  <div class="wrap pie">
+    <div>
+      <a href="#/" class="logo" style="margin-bottom:12px"><img src="img/logo.png" alt=""><b><span>Little</span><em>Rabbit</em></b></a>
+      <p>Juegos que despiertan la curiosidad, la imaginación y las ganas de aprender de tus peques, en cada etapa.</p>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <a href="#" data-wpp-general>💬 WhatsApp</a>
+      <a class="red-pie" href="https://www.instagram.com/little.rabbit.bo" target="_blank" rel="noopener" data-icono="ig">@little.rabbit.bo</a>
+      <a class="red-pie" href="https://www.facebook.com/Little.rabbit.bolivia" target="_blank" rel="noopener" data-icono="fb">Little Rabbit Bolivia</a>
+      <p>📍 Calle Sucre esquina Cobija, Centro<br>Santa Cruz, Bolivia</p>
+    </div>
+  </div>
+</footer>
+
+<a class="wpp-flot" href="#" data-wpp-general aria-label="Escribinos por WhatsApp"></a>
+
+<div class="capa" id="capa"></div>
+
+<aside class="panel" id="panel" aria-label="Carrito">
+  <div class="panel-head"><h3>🛒 Tu carrito</h3><button class="cerrar" data-cerrar>×</button></div>
+  <div class="panel-body" id="carritoItems"></div>
+  <div class="panel-foot" id="carritoPie"></div>
+</aside>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-caja"><button class="cerrar" data-cerrar>×</button><div id="modalContenido"></div></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="productos.js"></script>
+<script>
+// ============ CONFIGURACIÓN (lo único que se toca para conectar) ============
+const CONFIG = {
+  WHATSAPP: "59175666221",          // número de Brunella con código de Bolivia (591)
+  PRODUCTOS_URL: "https://nicolas-prada-n8n.jzkw3v.easypanel.host/webhook/little-rabbit/productos",              // webhook de N8N que devuelve la pestaña "Productos" del Sheet. Vacío = usa productos.js
+  WEBHOOK_PEDIDOS: "https://nicolas-prada-n8n.jzkw3v.easypanel.host/webhook/little-rabbit/pedido",            // URL del webhook de N8N que anota cada pedido en el CRM. Vacío = no anota
+  WEBHOOK_FIESTA: "https://nicolas-prada-n8n.jzkw3v.easypanel.host/webhook/little-rabbit/fiesta", // webhook de N8N del modo fiesta: revisa que el pedido de ese celular diga "Pagado" y anota el "Inicio de la oferta". Vacío = modo prueba (no revisa nada)
+  FIESTA_MINUTOS: 10,               // cuánto dura el modo fiesta
+  FIESTA_MAX: 10,                   // descuento máximo que puede elegir el cliente (%)
+  QR_IMG: "img/qr.jpg",             // imagen del QR de cobro de Brunella
+  BANNER: "img/banner-preventa-navidena.jpg",
+  FOTO_BRUNELLA: "img/brunella.jpg", // Brunella con sus hijos
+  INSTAGRAM: "https://www.instagram.com/little.rabbit.bo",
+  FACEBOOK: "https://www.facebook.com/Little.rabbit.bolivia",
+  TIENDA: "Calle Sucre esquina Cobija, Centro, Santa Cruz",
+  // t1-t3 son reales; t4-t10 son DE EJEMPLO solo para que Brunella vea la sección: cambiarlos por reales antes de mostrar la web al público
+  TESTIMONIOS: ["img/testimonios/t1.jpg", "img/testimonios/t4.jpg", "img/testimonios/t2.jpg", "img/testimonios/t5.jpg", "img/testimonios/t3.jpg", "img/testimonios/t6.jpg", "img/testimonios/t8.jpg", "img/testimonios/t7.jpg", "img/testimonios/t9.jpg", "img/testimonios/t10.jpg"]               // capturas de clientas (img/testimonios/t1.jpg…), con el nombre tapado. Vacío = la sección no se muestra
+};
+const CIUDADES = ["Santa Cruz","La Paz","Cochabamba","Sucre","Tarija","Oruro","Potosí","Beni","Pando","Otra"];
+const EDADES = {
+  "0-3": { titulo: "0 a 3 años", frase: "Sus primeros descubrimientos: formas, colores y texturas.", clase: "e03" },
+  "4-7": { titulo: "4 a 7 años", frase: "Jugar a ser grandes: roles, números y creatividad.", clase: "e46" },
+  "8-12": { titulo: "8 a 12 años", frase: "Construir, imaginar y resolver desafíos.", clase: "e79" }
+};
+// Categorías por habilidad: en el Sheet, una columna con casilla por cada una. Un producto puede tener varias.
+const CATEGORIAS = {
+  motricidad_fina: { titulo: "Motricidad fina", emoji: "✋🏼", frase: "Manos que aprenden: encajar, coordinar, agarrar y construir." },
+  pensamiento_logico: { titulo: "Pensamiento lógico", emoji: "🧠", frase: "Resolver, ordenar y encontrar soluciones jugando." },
+  atencion: { titulo: "Atención", emoji: "🎯", frase: "Juegos que entrenan la concentración y la memoria." },
+  numeros: { titulo: "Números", emoji: "🔢", frase: "Contar, sumar y descubrir los números con las manos." },
+  lenguaje: { titulo: "Lenguaje", emoji: "🗣️", frase: "Palabras nuevas, historias y conversaciones mientras juegan." },
+  creatividad: { titulo: "Creatividad", emoji: "🎨", frase: "Imaginar, inventar y crear sus propios mundos." },
+  juego_de_roles: { titulo: "Juego de roles", emoji: "🤝🏼", frase: "Jugar a ser grandes: cocinar, vender, cuidar y compartir." }
+};
+// Categorías de libros: en el Sheet, columna "Libro". Un libro no va en las secciones por edad.
+const LIBROS = {
+  aprendizajes: { titulo: "Aprendizajes", emoji: "🧠", frase: "Letras, números y primeros conceptos para aprender jugando.", clase: "e46" },
+  cuentos: { titulo: "Cuentos", emoji: "📖", frase: "Historias para leer juntos y soñar antes de dormir.", clase: "e03" },
+  sensoriales: { titulo: "Sensoriales", emoji: "✋🏼", frase: "Texturas, sonidos y solapas para descubrir con las manos.", clase: "e79" }
+};
+
+// ============ ÍCONOS ============
+const ICONO_WPP = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.3-18.1C18.1 1.5 15.1.2 12 .2 5.5.2.2 5.5.2 12c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.7c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.2z"/></svg>';
+const ICONO_IG = '<svg viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="#E1306C" stroke="none"/></svg>';
+const ICONO_FB = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1877F2"/><path d="M13.4 19v-6h2.1l.3-2.4h-2.4V9.1c0-.7.2-1.2 1.2-1.2h1.3V5.8c-.2 0-1-.1-1.9-.1-1.9 0-3.1 1.1-3.1 3.2v1.8H8.8V13h2.1v6z" fill="#fff"/></svg>';
+const OREJAS = c => `<svg class="orejas" viewBox="0 0 120 90" fill="${c}"><ellipse cx="38" cy="45" rx="16" ry="44" transform="rotate(-12 38 45)"/><ellipse cx="82" cy="45" rx="16" ry="44" transform="rotate(12 82 45)"/><ellipse cx="38" cy="48" rx="7" ry="32" fill="#fff" opacity=".55" transform="rotate(-12 38 48)"/><ellipse cx="82" cy="48" rx="7" ry="32" fill="#fff" opacity=".55" transform="rotate(12 82 48)"/></svg>`;
+
+// ============ UTILIDADES ============
+const $ = s => document.querySelector(s);
+// Montos: punto decimal, sin separador de miles; los enteros sin decimales (1000 Bs · 288.63 Bs)
+const bs = n => { const v = Math.round(Number(n) * 100) / 100; return (Number.isInteger(v) ? String(v) : v.toFixed(2)) + " Bs"; };
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const linkWpp = texto => `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent(texto)}`;
+const guardar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+const leer = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (e) { return d; } };
+function aviso(t) { const el = $("#toast"); el.textContent = t; el.classList.add("ver"); clearTimeout(aviso.t); aviso.t = setTimeout(() => el.classList.remove("ver"), 2200); }
+
+// CSV del Google Sheet → lista de productos
+function leerCSV(txt) {
+  const filas = []; let fila = [], campo = "", comillas = false;
+  for (let i = 0; i < txt.length; i++) {
+    const c = txt[i];
+    if (comillas) { if (c === '"' && txt[i + 1] === '"') { campo += '"'; i++; } else if (c === '"') comillas = false; else campo += c; }
+    else if (c === '"') comillas = true;
+    else if (c === ",") { fila.push(campo); campo = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && txt[i + 1] === "\n") i++; fila.push(campo); filas.push(fila); fila = []; campo = ""; }
+    else campo += c;
+  }
+  if (campo || fila.length) { fila.push(campo); filas.push(fila); }
+  const cab = filas.shift().map(h => h.trim().toLowerCase());
+  return filas.filter(f => f.some(x => x.trim())).map(f => Object.fromEntries(cab.map((h, i) => [h, (f[i] ?? "").trim()])));
+}
+
+// ============ DATOS ============
+let PRODUCTOS = [];
+async function cargarProductos() {
+  let lista = window.PRODUCTOS_RESPALDO || [];
+  let imagenes = {};
+  if (CONFIG.PRODUCTOS_URL) {
+    try {
+      const r = await fetch(CONFIG.PRODUCTOS_URL, { cache: "no-store" });
+      if (r.ok) {
+        const txt = await r.text();
+        let datos; try { datos = JSON.parse(txt); } catch (e) { datos = leerCSV(txt); }
+        imagenes = (!Array.isArray(datos) && datos.imagenes) || {};
+        datos = Array.isArray(datos) ? datos : datos.productos;
+        if (Array.isArray(datos) && datos.length) lista = datos;
+      }
+    } catch (e) {}
+  }
+  // Pestaña "Imágenes de la web" del Sheet: Portada, QR y Foto de Brunella reemplazan las de siempre (si tienen enlace)
+  if (imagenes.portada) CONFIG.BANNER = fotoDirecta(imagenes.portada);
+  if (imagenes.qr) CONFIG.QR_IMG = fotoDirecta(imagenes.qr);
+  if (imagenes.foto_de_brunella) CONFIG.FOTO_BRUNELLA = fotoDirecta(imagenes.foto_de_brunella);
+  // Los títulos del Sheet ("ID", "Precio antes", "Descripción") pasan a claves simples (id, precio_antes, descripcion)
+  const clave = k => k.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, "_");
+  PRODUCTOS = lista
+    .map(p => Object.fromEntries(Object.entries(p).map(([k, v]) => [clave(k), v])))
+    .filter(p => p.nombre)
+    .map(p => ({ ...p, id: clave(String(p.nombre)).replace(/[^a-z0-9_]+/g, "_"), foto: fotoDirecta(p.foto), fotos: [p.foto, p.foto_2, p.foto_3].map(fotoDirecta).filter(Boolean), precio: Number(String(p.precio).replace(",", ".")) || 0,
+      precio_antes: Number(String(p.precio_antes || "").replace(",", ".")) || 0, edad: String(p.edad || "").trim(),
+      libro: clave(String(p.libro || "")),
+      // casilla marcada en el Sheet (TRUE) o lista escrita ("Lenguaje, Creatividad") en productos.js
+      categorias: Object.keys(CATEGORIAS).filter(k => /^(true|si|sí|x|1)$/i.test(String(p[k] ?? "").trim())
+        || String(p.categorias || "").split(",").map(clave).includes(k)),
+      agotado: String(p.activo || "si").trim().toLowerCase() === "no" }));  // "no" en Activo = se muestra como Agotado
+}
+// Los agotados siempre van al final de cada lista
+const ordenar = lista => [...lista].sort((a, b) => a.agotado - b.agotado);
+// Un link de Google Drive ("compartir") se convierte en un link directo a la imagen
+function fotoDirecta(f) {
+  const m = String(f || "").match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:export=\w+&)?id=)([\w-]+)/);
+  return m ? `https://lh3.googleusercontent.com/d/${m[1]}` : String(f || "").trim();
+}
+const porId = id => PRODUCTOS.find(p => p.id === id);
+const ofertas = () => PRODUCTOS.filter(p => p.precio_antes > p.precio);
+
+// ============ MODO FIESTA (oferta de 10 minutos para clientes que ya pagaron) ============
+// Brunella le manda a su cliente el link #/fiesta después de recibir el comprobante. El cliente pone su celular,
+// N8N revisa en el Sheet que su pedido diga "Pagado" y anota la hora de inicio ("Inicio de la oferta"): esa hora
+// manda, así el contador no se reinicia aunque recargue o cambie de celular. Sin webhook = modo prueba.
+let fiesta = leer("lr_fiesta", null); // {celular, fin (hora de este navegador), pct, vencida, prueba}
+const fiestaActiva = () => !!(fiesta && !fiesta.vencida && Date.now() < fiesta.fin);
+const precioFinal = p => fiestaActiva() ? Math.round(p.precio * (100 - fiesta.pct)) / 100 : p.precio;
+let tFiesta;
+
+async function verificarFiesta(celular) {
+  if (!CONFIG.WEBHOOK_FIESTA) { // modo prueba: el inicio se guarda solo en este navegador
+    const pruebas = leer("lr_fiesta_prueba", {});
+    if (!pruebas[celular]) { pruebas[celular] = Date.now(); guardar("lr_fiesta_prueba", pruebas); }
+    return { ok: true, inicio: pruebas[celular], ahora: Date.now(), prueba: true };
+  }
+  const r = await fetch(CONFIG.WEBHOOK_FIESTA, { method: "POST", body: new URLSearchParams({ celular }) });
+  return r.json(); // {ok, inicio (ms), ahora (ms del servidor)} o {ok:false, motivo:"no_pagado"|"vencida"}
+}
+function activarFiesta(celular, r) {
+  // el reloj del servidor manda: se corrige la diferencia con el reloj de este celular
+  const fin = Date.now() + (Number(r.inicio) + CONFIG.FIESTA_MINUTOS * 60000 - Number(r.ahora));
+  const pct = fiesta?.celular === celular && fiesta.pct && !fiesta.vencida ? fiesta.pct : 1; // si se reactiva, elige su descuento de nuevo desde 1%
+  fiesta = { celular, fin, pct, prueba: !!r.prueba };
+  guardar("lr_fiesta", fiesta);
+  if (!fiestaActiva()) return terminarFiesta();
+  aplicarFiesta(); confeti(); location.hash = "#/";
+}
+function aplicarFiesta() {
+  const on = fiestaActiva();
+  document.body.classList.toggle("fiesta", on);
+  $("#fiestaBarra").hidden = !on;
+  clearInterval(tFiesta);
+  if (on) { pintarBarra(); tFiesta = setInterval(() => fiestaActiva() ? pintarReloj() : terminarFiesta(), 1000); }
+  pintarCarrito();
+}
+function pintarBarra() {
+  $("#fiestaBarra").innerHTML = `<div class="wrap"><span>🎉 Modo fiesta</span>
+    <span class="elige">Elige tu descuento:<button data-fiesta="-1" aria-label="Menos descuento">−</button><b class="pct">${fiesta.pct}%</b><button data-fiesta="1" aria-label="Más descuento">+</button></span>
+    <span class="reloj" id="relojFiesta"></span></div>`;
+  pintarReloj();
+}
+function pintarReloj() {
+  const s = Math.max(0, Math.round((fiesta.fin - Date.now()) / 1000)), el = $("#relojFiesta");
+  if (el) el.textContent = `⏳ ${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
+}
+function cambiarPct(d) {
+  if (!fiestaActiva()) return;
+  fiesta.pct = Math.min(CONFIG.FIESTA_MAX, Math.max(1, fiesta.pct + d));
+  guardar("lr_fiesta", fiesta); pintarBarra(); pintarCarrito(); refrescar();
+}
+function terminarFiesta() {
+  clearInterval(tFiesta);
+  if (fiesta) { fiesta.vencida = true; guardar("lr_fiesta", fiesta); }
+  document.body.classList.remove("fiesta"); $("#fiestaBarra").hidden = true;
+  pintarCarrito(); refrescar(); mostrarVencida();
+}
+function mostrarVencida() {
+  const msj = `¡Hola Little Rabbit! 🐰 Mi oferta del modo fiesta 🎉 venció y quiero aprovecharla en mi próxima compra.${fiesta?.celular ? `\n📱 ${fiesta.celular}` : ""}`;
+  abrirModal(`<div class="gracias"><div class="grande" style="font-size:3rem">⏰</div><h2>Tu oferta venció</h2>
+    <p class="sub" style="margin:10px 0 22px">Pero como apreciamos a nuestros clientes, podés canjearla en tu próxima compra 💗</p>
+    <a class="btn btn-wpp" data-cupon href="${linkWpp(msj)}" target="_blank" rel="noopener">${ICONO_WPP} Quiero aprovecharla en mi próxima compra</a>
+    <button class="volver" data-cerrar>Seguir mirando juguetes</button></div>`);
+}
+// Al apretar "Quiero aprovecharla en mi próxima compra", N8N anota el cupón en la hoja Clientes (columna Cupón) de ese celular,
+// por si el mensaje de WhatsApp se pierde en el chat. Brunella lo reactiva después mandándole este mismo enlace.
+document.addEventListener("click", e => {
+  if (!e.target.closest("[data-cupon]") || !CONFIG.WEBHOOK_FIESTA || !fiesta?.celular) return;
+  fetch(CONFIG.WEBHOOK_FIESTA, { method: "POST", keepalive: true, body: new URLSearchParams({ celular: fiesta.celular, accion: "cupon" }) }).catch(() => {});
+});
+function confeti() {
+  for (let i = 0; i < 40; i++) {
+    const s = document.createElement("span");
+    s.className = "confeti"; s.textContent = ["🎉", "🎊", "✨", "🐰", "💜"][i % 5];
+    s.style.left = Math.random() * 100 + "vw"; s.style.animationDelay = Math.random() * 1.2 + "s";
+    document.body.appendChild(s); setTimeout(() => s.remove(), 4500);
+  }
+}
+// vuelve a pintar la vista con los precios nuevos sin mover la pantalla
+function refrescar() { const y = scrollY; $("#app").innerHTML = ""; router(); window.scrollTo({ top: y, behavior: "instant" }); }
+function vistaFiesta() {
+  if (fiestaActiva()) return `<div class="wrap"><div class="checkout fiesta-pagina"><div class="grande">🎉</div><h2>¡Tu modo fiesta está activo!</h2>
+    <p class="sub">Elegí tu descuento arriba y aprovechá antes de que termine el tiempo.</p><a class="btn btn-rosa" href="#/todos">Ver todos los juguetes</a></div></div>`;
+  return `<div class="wrap"><form class="checkout fiesta-pagina" id="formFiesta" novalidate>
+    <div class="grande">🎁</div>
+    <h2>¡Tenemos una sorpresa para vos!</h2>
+    <p class="sub">Gracias por tu compra 💗 Por ser cliente de Little Rabbit tenés ${CONFIG.FIESTA_MINUTOS} minutos con el descuento que vos elijas, hasta ${CONFIG.FIESTA_MAX}%.</p>
+    <div class="campo"><label>Tu celular (el mismo de tu pedido)</label><input name="celular" required inputmode="tel" maxlength="16" value="${esc(cliente.celular || "")}">
+      <small class="ayuda" id="ayudaFiesta"></small></div>
+    <button class="btn btn-rosa" style="width:100%" type="submit">🎉 Activar mi sorpresa</button>
+  </form></div>`;
+}
+document.addEventListener("submit", async e => {
+  if (e.target.id !== "formFiesta") return;
+  e.preventDefault();
+  const cel = celularBoliviano(e.target.celular.value), ay = $("#ayudaFiesta");
+  if (!cel) { ay.textContent = "Escribí tu celular de 8 dígitos 🙏🏼"; return; }
+  // con N8N siempre se pregunta: Brunella puede reactivar la oferta (cupón) con este mismo enlace
+  if (!CONFIG.WEBHOOK_FIESTA && fiesta?.celular === cel && fiesta.vencida) return mostrarVencida();
+  ay.textContent = "Revisando tu pedido…";
+  try {
+    const r = await verificarFiesta(cel);
+    if (r.ok) activarFiesta(cel, r);
+    else if (r.motivo === "vencida") { fiesta = { celular: cel, fin: 0, pct: 0, vencida: true }; guardar("lr_fiesta", fiesta); mostrarVencida(); }
+    else ay.textContent = "Todavía no vemos tu pago confirmado. Si ya mandaste el comprobante, esperá un ratito a que lo revisemos 🐰";
+  } catch (err) { ay.textContent = "No pudimos revisar tu pedido ahora. Probá de nuevo en un momento."; }
+});
+
+// ============ CARRITO ============
+let carrito = leer("lr_carrito", []); // [{id, cant}]
+function itemsCarrito() { return carrito.map(i => ({ ...i, p: porId(i.id) })).filter(i => i.p); }
+function totalCarrito() { return Math.round(itemsCarrito().reduce((s, i) => s + precioFinal(i.p) * i.cant, 0) * 100) / 100; }
+function agregar(id) {
+  if (porId(id)?.agotado) return aviso("Este producto está agotado 🐰");
+  const i = carrito.find(x => x.id === id);
+  i ? i.cant++ : carrito.push({ id, cant: 1 });
+  guardar("lr_carrito", carrito); pintarCarrito(); aviso("🐰 Agregado al carrito");
+}
+function cambiar(id, d) {
+  const i = carrito.find(x => x.id === id); if (!i) return;
+  i.cant += d; if (i.cant <= 0) carrito = carrito.filter(x => x.id !== id);
+  guardar("lr_carrito", carrito); pintarCarrito();
+}
+function pintarCarrito() {
+  const items = itemsCarrito(), n = items.reduce((s, i) => s + i.cant, 0);
+  const num = $("#numCarrito"); num.textContent = n; num.dataset.n = n;
+  $("#carritoItems").innerHTML = items.length ? items.map(i => `
+    <div class="item">
+      <img src="${esc(i.p.foto)}" alt="" referrerpolicy="no-referrer">
+      <div class="dt">
+        <h4>${esc(i.p.nombre)}</h4>
+        <div class="fila"><b>${bs(precioFinal(i.p) * i.cant)}</b><button class="quitar" data-quitar="${i.id}">Quitar</button></div>
+        <div class="cant"><button data-menos="${i.id}">−</button><span>${i.cant}</span><button data-mas="${i.id}">+</button></div>
+      </div>
+    </div>`).join("") : `<div class="vacio">Tu carrito está vacío 🐰<br><br><a class="btn btn-borde" href="#/ofertas" data-cerrar>Ver ofertas del mes</a></div>`;
+  $("#carritoPie").innerHTML = items.length ? `
+    <div class="total"><span>Total</span><b>${bs(totalCarrito())}</b></div>
+    <button class="btn btn-rosa" data-checkout>Finalizar pedido</button>
+    <p class="nota">Pagás con QR y nos mandás el comprobante por WhatsApp.</p>` : "";
+}
+const abrirCarrito = () => { $("#panel").classList.add("abierto"); $("#capa").classList.add("abierta"); };
+function cerrarTodo() { $("#panel").classList.remove("abierto"); $("#modal").classList.remove("abierto"); $("#capa").classList.remove("abierta"); }
+
+// ============ VISTAS ============
+// Etiqueta de la tarjeta: la categoría del libro o la edad del juguete
+const etiqueta = p => (LIBROS[p.libro]
+  ? `<span class="edad" data-e="libro">${LIBROS[p.libro].emoji} ${LIBROS[p.libro].titulo}</span>`
+  : `<span class="edad" data-e="${esc(p.edad)}">${esc(EDADES[p.edad]?.titulo || p.edad)}</span>`)
+  + p.categorias.map(k => `<a class="cat" href="#/categoria/${k}">${CATEGORIAS[k].emoji} ${CATEGORIAS[k].titulo}</a>`).join("");
+const msjWpp = p => p.agotado
+  ? `¡Hola Little Rabbit! 🐰 Vi que el *${p.nombre}* está agotado. ¿Cuándo vuelve a estar disponible?`
+  : `¡Hola Little Rabbit! 🐰 Me interesa el *${p.nombre}* (${bs(p.precio)}). ¿Está disponible?`;
+
+function tarjeta(p) {
+  const desc = !p.agotado && p.precio_antes > p.precio ? Math.round((1 - p.precio / p.precio_antes) * 100) : 0;
+  return `
+  <article class="card${p.agotado ? " agotada" : ""}">
+    <div class="foto" data-ver="${p.id}">
+      <img src="${esc(p.foto)}" alt="${esc(p.nombre)}" loading="lazy" referrerpolicy="no-referrer">
+      ${p.agotado ? `<span class="badge badge-agotado">Agotado</span>` : fiestaActiva() ? `<span class="badge">🎉 -${fiesta.pct}%</span>` : desc ? `<span class="badge">-${desc}%</span>` : ""}
+    </div>
+    <div class="info">
+      <div class="tags">${etiqueta(p)}</div>
+      <h3 data-ver="${p.id}">${esc(p.nombre)}</h3>
+      <p class="desc">${esc(p.descripcion)}</p>
+      <div class="precio"><b>${p.precio > 0 ? bs(precioFinal(p)) : "Consultar precio"}</b>${fiestaActiva() && !p.agotado ? `<s>${bs(p.precio)}</s>` : desc ? `<s>${bs(p.precio_antes)}</s>` : ""}</div>
+      <div class="acciones">
+        ${p.agotado ? `<button class="btn btn-gris" disabled>Agotado</button>` : p.precio > 0 ? `<button class="btn btn-rosa" data-agregar="${p.id}">🛒 Agregar</button>` : `<a class="btn btn-borde" href="${linkWpp(msjWpp(p))}" target="_blank" rel="noopener">Consultar precio</a>`}
+        <a class="btn btn-wpp" href="${linkWpp(msjWpp(p))}" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">${ICONO_WPP}</a>
+      </div>
+    </div>
+  </article>`;
+}
+const grilla = (lista, vacio = "Pronto vas a encontrar juguetes acá 🐰") =>
+  lista.length ? `<div class="grilla">${ordenar(lista).map(tarjeta).join("")}</div>` : `<div class="vacio">${vacio}</div>`;
+
+function vistaInicio() {
+  const of = ofertas();
+  return `
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <span class="lema">JUEGA ♥ APRENDE ♥ CRECE</span>
+        <h1>Juegos didácticos que estimulan el <em>desarrollo</em> de tus <span>peques</span> 🐰</h1>
+        <ul class="beneficios">
+          <li>✋🏼 Desarrollan la motricidad y la coordinación</li>
+          <li>🧠 Estimulan el pensamiento lógico y la atención</li>
+          <li>🗣️ Impulsan el lenguaje y la creatividad</li>
+          <li>🤝🏼 Enseñan a compartir con el juego de roles</li>
+          <li>📵 Aprenden jugando, sin pantallas</li>
+        </ul>
+        <div class="confianza"><span>🚚 Envíos a toda Bolivia</span><span>📱 Pago con QR</span></div>
+      </div>
+      <a class="hero-img" href="#ofertas-del-mes"><img src="${CONFIG.BANNER}" referrerpolicy="no-referrer" alt="Preventa navideña Little Rabbit"></a>
+    </div>
+  </div>
+
+  ${seccionTestimonios()}
+
+  <section id="ofertas-del-mes"><div class="wrap">
+    <div class="titulo"><div><h2>🎁 Ofertas del mes</h2><p>Precios especiales por tiempo limitado.</p></div><a href="#/ofertas">Ver todas →</a></div>
+    ${grilla(ordenar(of).slice(0, cabenFilas()))}
+    ${of.length > cabenFilas() ?`<div class="ver-mas"><a class="btn btn-borde" href="#/ofertas">Ver todas las ofertas (${of.length}) →</a></div>` : ""}
+  </div></section>
+
+  <section id="por-edad" style="background:#fff"><div class="wrap">
+    <div class="titulo"><div><h2>🎂 Buscá por edades</h2><p>Cada etapa tiene su juguete ideal.</p></div></div>
+    <div class="edades">
+      ${Object.entries(EDADES).map(([k, e]) => `
+        <a class="edad-card ${e.clase}" href="#/edad/${k}">
+          ${OREJAS(k === "0-3" ? "#F7C6D4" : k === "4-7" ? "#CFE3B8" : "#F8CFB4")}
+          <h3>${e.titulo}</h3><p>${e.frase}</p><span class="ir">Ver juguetes →</span>
+        </a>`).join("")}
+    </div>
+  </div></section>
+
+  <section id="categorias"><div class="wrap">
+    <div class="titulo"><div><h2>🧩 Buscá por categorías</h2><p>Elegí la habilidad que querés reforzar.</p></div></div>
+    <div class="habilidades">
+      ${Object.entries(CATEGORIAS).map(([k, c]) => `<a href="#/categoria/${k}">${c.emoji} ${c.titulo}</a>`).join("")}
+    </div>
+  </div></section>
+
+  <section id="libros" style="background:#fff"><div class="wrap">
+    <div class="titulo"><div><h2>📚 Libros</h2><p>Para leer, descubrir y aprender juntos.</p></div></div>
+    <div class="edades">
+      ${Object.entries(LIBROS).map(([k, l]) => `
+        <a class="edad-card ${l.clase}" href="#/libros/${k}">
+          <span class="libro-emoji">${l.emoji}</span>
+          <h3>${l.titulo}</h3><p>${l.frase}</p><span class="ir">Ver libros →</span>
+        </a>`).join("")}
+    </div>
+  </div></section>
+
+  <section id="legos"><div class="wrap">
+    <div class="titulo"><div><h2>🧱 Legos</h2><p>Para armar, imaginar y coleccionar. Elegí tu línea favorita.</p></div><a href="#/edad/8-12">Ver todos →</a></div>
+    ${chipsLegos()}
+  </div></section>
+
+  <section id="sobre-mi" style="background:#fff"><div class="wrap">
+    <div class="sobre sobre-previa">
+      <div class="sobre-foto${CONFIG.FOTO_BRUNELLA.includes("logo") ? " es-logo" : ""}"><img src="${CONFIG.FOTO_BRUNELLA}" referrerpolicy="no-referrer" alt="Brunella, de Little Rabbit"></div>
+      <div>
+        <span class="lema">DETRÁS DE LITTLE RABBIT</span>
+        <h2>Hola, soy Brunella, la mamá detrás de Little Rabbit 💗</h2>
+        <p class="sobre-intro">Un sueño que nació del amor por la infancia y de las ganas de crear algo bonito para nuestros pequeños.</p>
+        <p>Soy mamá, emprendedora y creo que la infancia está hecha de pequeños momentos que se vuelven grandes recuerdos. Little Rabbit nació de ese amor, para que cada juego sea tiempo de calidad con los niños que quieres.</p>
+        <a class="btn btn-borde" href="#/sobre-mi">Leer mi historia completa →</a>
+      </div>
+    </div>
+  </div></section>`;
+}
+
+// cuántas tarjetas entran en filas completas (2 filas; 3 en celular) para que no queden huecos vacíos
+const cabenFilas = () => {
+  const w = innerWidth, cols = w <= 600 ? 2 : Math.max(1, Math.floor((Math.min(w, 1180) - 40 + 24) / 274));
+  return cols * (cols >= 3 ? 2 : 3);
+};
+
+// Testimonios: una fila que se desliza sin parar (pausa al pasar el mouse)
+function seccionTestimonios() {
+  const t = CONFIG.TESTIMONIOS;
+  if (!t.length) return "";
+  const mitad = Array.from({ length: Math.ceil(8 / t.length) }, () => t).flat();
+  const fila = (lista, clase) => `<div class="marquesina ${clase}"><div class="pista">${[...lista, ...lista].map(src =>
+    `<figure class="testi"><img src="${esc(src)}" alt="Testimonio de una clienta de Little Rabbit"></figure>`).join("")}</div></div>`;
+  return `
+  <section id="testimonios" style="background:#fff"><div class="wrap">
+    <div class="titulo"><div><h2>💗 Más de 500 clientes satisfechos</h2><p>Lo que cuentan las familias que ya compraron en Little Rabbit.</p></div></div>
+  </div>
+  ${fila(mitad, "")}
+  </section>`;
+}
+
+// Buscador: sin importar tildes ni mayúsculas; cada palabra tiene que aparecer (en cualquier orden) en nombre, descripción, línea, edad o categoría
+const sinTildes = s => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+function buscar(q) {
+  const palabras = sinTildes(q).split(/\s+/).filter(Boolean);
+  return PRODUCTOS.filter(p => {
+    const texto = sinTildes([p.nombre, p.descripcion, p.linea, EDADES[p.edad]?.titulo, LIBROS[p.libro] ? "libro " + LIBROS[p.libro].titulo : "",
+      ...p.categorias.map(k => CATEGORIAS[k].titulo)].join(" "));
+    return palabras.every(w => texto.includes(w));
+  });
+}
+
+// Legos (8 a 12 años) divididos por línea: Marvel, Star Wars, Autos… (columna "Línea" del Sheet; sin línea = Otros)
+const lineaDe = p => String(p.linea || "").trim() || "Otros";
+// Es Lego si dice "Lego" en el nombre o tiene Línea; el resto de 8 a 12 (Simón, Rummikub…) va en "Juegos"
+const esLego = p => /lego/i.test(p.nombre) || !!String(p.linea || "").trim();
+const legos = () => PRODUCTOS.filter(p => p.edad === "8-12" && !LIBROS[p.libro] && esLego(p));
+const juegos812 = () => PRODUCTOS.filter(p => p.edad === "8-12" && !LIBROS[p.libro] && !esLego(p));
+function lineasLego() {
+  const m = new Map();
+  legos().forEach(p => m.set(lineaDe(p), (m.get(lineaDe(p)) || 0) + 1));
+  return [...m].sort((a, b) => (a[0] === "Otros") - (b[0] === "Otros") || b[1] - a[1])
+    .map(([nombre, n]) => ({ nombre, n, slug: nombre.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-") }));
+}
+const chipsLegos = (activo = "") => `<div class="habilidades chips-legos">${activo ? `<a href="#/edad/8-12">Todos</a>` : ""}${lineasLego().map(l => `<a href="#/edad/8-12/${l.slug}"${l.slug === activo ? ' class="on"' : ""}>🧱 ${esc(l.nombre)}</a>`).join("")}</div>`;
+function vistaLegos(slug) {
+  const e = EDADES["8-12"], ls = lineasLego(), jg = juegos812();
+  if (ls.length < 2) return vistaLista("🐰 " + e.titulo, e.frase, [...jg, ...legos()], e.clase);
+  const ver = ls.filter(l => !slug || l.slug === slug);
+  return `<div class="wrap">
+    <div class="cabecera-edad ${e.clase}"><h1>🐰 ${e.titulo}</h1><p>${e.frase}</p></div>
+    ${chipsLegos(slug || "todos")}
+    ${!slug && jg.length ? `<section class="linea-lego"><h2>🎲 Juegos <small>${jg.length}</small></h2>${grilla(jg)}</section>` : ""}
+    ${(ver.length ? ver : ls).map(l => `<section class="linea-lego"><h2>🧱 ${esc(l.nombre)} <small>${l.n}</small></h2>${grilla(legos().filter(p => lineaDe(p) === l.nombre))}</section>`).join("")}
+  </div>`;
+}
+
+function vistaSobreMi() {
+  return `<div class="wrap">
+    <a class="volver" href="#/">← Volver al inicio</a>
+    <div class="sobre sobre-completa">
+      <div class="sobre-foto${CONFIG.FOTO_BRUNELLA.includes("logo") ? " es-logo" : ""}"><img src="${CONFIG.FOTO_BRUNELLA}" referrerpolicy="no-referrer" alt="Brunella, de Little Rabbit"></div>
+      <div>
+        <span class="lema">DETRÁS DE LITTLE RABBIT</span>
+        <h2>Hola, soy Brunella, la mamá detrás de Little Rabbit 💗</h2>
+        <p class="sobre-intro">Un sueño que nació del amor por la infancia y de las ganas de crear algo bonito para nuestros pequeños.</p>
+        <p>Soy Brunella Frigoli, mamá, emprendedora y una mujer que cree profundamente en acompañar a los niños mientras descubren el mundo.</p>
+        <p>Como mamá, sé que la infancia está llena de pequeños momentos que se convierten en grandes recuerdos: un cuento antes de dormir, un juego compartido, una pregunta inesperada o la emoción de descubrir algo nuevo. Y esos momentos los vivimos todos: mamás, papás, abuelos, tíos, padrinos y cada persona que quiere a un niño.</p>
+        <p>Ese amor por la infancia me inspiró a crear Little Rabbit, un espacio para acercar a las familias, y a todos los que quieren regalar un buen momento, juguetes educativos, cuentos, juegos y materiales que inviten a los niños a explorar, imaginar, aprender y disfrutar. Quería crear algo más que una tienda: productos con propósito, que despierten la curiosidad de los pequeños y nos regalen tiempo de calidad con ellos.</p>
+        <h3>⭐ Detrás de Little Rabbit hay una mamá que sueña</h3>
+        <p>También soy una mujer que emprende, que tiene sueños y que cada día busca el equilibrio entre la familia, el trabajo y los proyectos que lleva en el corazón. Sé que ser mamá es hermoso, pero también puede ser agotador. Y sé que cuidar a un niño, sea cual sea tu lugar en su vida, es un acto de amor enorme. No necesitamos ser perfectos: necesitamos estar presentes, acompañarlos y disfrutar de lo cotidiano.</p>
+        <p>Por eso, Little Rabbit también es la posibilidad de construir un sueño propio mientras acompaño el crecimiento de mis hijos.</p>
+        <h3>🎁 ¿Qué quiero compartir contigo?</h3>
+        <p>Seas mamá, papá, abuelo, tía, padrino o alguien que quiere sorprender a un niño especial, quiero que cuando elijas un producto de Little Rabbit sientas que encontraste algo más que un juguete o un libro: nuevas formas de jugar, aprender, imaginar y conectar con los pequeños de tu vida.</p>
+        <p>Cada cuento puede abrir una conversación. Cada juego puede despertar una habilidad. Cada actividad puede convertirse en un recuerdo compartido. Y aunque los niños crecen demasiado rápido, esos pequeños momentos juntos dejan huellas para toda la vida.</p>
+        <h3>🌱 Un sueño que crece junto a tu familia</h3>
+        <p>Little Rabbit es mi pequeño gran sueño, creado con mucho cariño y con la ilusión de llegar a más hogares, acompañando a familias y a todas las personas que quieren a un niño, en una de las etapas más bonitas de la vida.</p>
+        <p>Gracias por confiar en mi emprendimiento, por elegir una tienda creada por una mamá y por permitirme ser parte, aunque sea con un pequeño detalle, de la infancia de los niños que más quieres.</p>
+        <p class="sobre-firma">Con cariño,<br><strong>Brunella Frigoli</strong><br>Fundadora de Little Rabbit 🐰</p>
+        <p class="sobre-lema"><em>Pequeños juegos, grandes descubrimientos y recuerdos que duran para siempre.</em></p>
+        <div class="sobre-ctas">
+          <a class="btn btn-wpp" href="#" data-wpp-general>${ICONO_WPP} Escribime por WhatsApp</a>
+          <a class="btn btn-borde red" href="${CONFIG.INSTAGRAM}" target="_blank" rel="noopener">${ICONO_IG} Instagram</a>
+          <a class="btn btn-borde red" href="${CONFIG.FACEBOOK}" target="_blank" rel="noopener">${ICONO_FB} Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function vistaLista(titulo, frase, lista, clase, vacio) {
+  return `<div class="wrap">
+    <div class="cabecera-edad ${clase || "e03"}"><h1>${titulo}</h1><p>${frase}</p></div>
+    <section style="padding-top:28px">${grilla(lista, vacio)}</section>
+  </div>`;
+}
+
+function vistaProducto(p) {
+  const desc = !p.agotado && p.precio_antes > p.precio;
+  return `<div class="detalle${p.agotado ? " agotada" : ""}">
+    <div class="foto"><img id="fotoGrande" src="${esc(p.foto)}" alt="${esc(p.nombre)}" referrerpolicy="no-referrer">
+      ${p.fotos.length > 1 ? `<div class="miniaturas">${p.fotos.map((f, i) => `<button type="button" class="mini${i ? "" : " activa"}" data-foto="${esc(f)}" aria-label="Ver foto ${i + 1}"><img src="${esc(f)}" alt="" referrerpolicy="no-referrer"></button>`).join("")}</div>` : ""}
+    </div>
+    <div class="info">
+      <div class="tags">${etiqueta(p)}${p.agotado ? `<span class="edad" data-e="agotado">Agotado</span>` : ""}</div>
+      <h2>${esc(p.nombre)}</h2>
+      <div class="precio"><b>${p.precio > 0 ? bs(precioFinal(p)) : "Consultar precio"}</b>${fiestaActiva() && !p.agotado ? `<s>${bs(p.precio)}</s>` : desc ? `<s>${bs(p.precio_antes)}</s>` : ""}</div>
+      <p class="desc">${esc(p.descripcion)}</p>
+      ${p.agotado ? `<button class="btn btn-gris" disabled>Agotado por ahora</button>` : p.precio > 0 ? `<button class="btn btn-rosa" data-agregar="${p.id}">🛒 Agregar al carrito</button>` : ""}
+      <a class="btn btn-wpp" href="${linkWpp(msjWpp(p))}" target="_blank" rel="noopener">${ICONO_WPP} ${p.agotado ? "Avisame cuando vuelva" : "Consultar por WhatsApp"}</a>
+    </div>
+  </div>`;
+}
+
+// ============ CHECKOUT ============
+let cliente = leer("lr_cliente", {});
+// Celular boliviano: 8 dígitos que empiezan con 6 o 7 (acepta +591, espacios y guiones). Devuelve los 8 dígitos o null.
+function celularBoliviano(v) {
+  let d = String(v || "").replace(/\D/g, "");
+  if (d.length === 11 && d.startsWith("591")) d = d.slice(3);
+  return /^[67]\d{7}$/.test(d) ? d : null;
+}
+function abrirModal(html) { $("#modalContenido").innerHTML = html; $("#modal").classList.add("abierto"); $("#capa").classList.add("abierta"); $(".modal-caja").scrollTop = 0; }
+
+function pasoDatos() {
+  $("#panel").classList.remove("abierto");
+  abrirModal(`<form class="checkout" id="formDatos" novalidate>
+    <div class="pasos"><span class="on"></span><span></span></div>
+    <h2>📦 ¿Cómo querés recibirlo?</h2>
+    <p class="sub">Último paso antes de pagar.</p>
+    <div class="entrega">
+      <label class="op"><input type="radio" name="entrega" value="Envío a domicilio" ${cliente.entrega === "Recoger en la tienda" ? "" : "checked"}><span>🚚 Envío a domicilio</span></label>
+      <label class="op"><input type="radio" name="entrega" value="Recoger en la tienda" ${cliente.entrega === "Recoger en la tienda" ? "checked" : ""}><span>🏪 Recoger en la tienda</span></label>
+    </div>
+    <div class="aviso-tienda" id="avisoTienda"><b>📍 ${CONFIG.TIENDA}</b><br>Te avisamos por WhatsApp cuando esté listo para recoger.</div>
+    <div class="campo"><label>Nombre y apellido</label><input name="nombre" required autocomplete="name" value="${esc(cliente.nombre)}"></div>
+    <div class="campo"><label>Celular</label><input name="celular" required inputmode="tel" autocomplete="tel" maxlength="16" value="${esc(cliente.celular)}">
+      <small class="ayuda" id="ayudaCel"></small></div>
+    <div class="campo" id="campoCiudad"><label>Ciudad</label><select name="ciudad" required><option value="" disabled hidden selected>Elegí tu ciudad</option>${CIUDADES.map(c => `<option>${c}</option>`).join("")}</select></div>
+    <div class="campo" id="campoDireccion"><label>Dirección o referencia</label><input name="direccion" required autocomplete="street-address" value="${esc(cliente.direccion)}"></div>
+    <div class="campo"><label>Nota (opcional)</label><textarea name="nota" placeholder="Ej: es para regalo 🎁">${esc(cliente.nota)}</textarea></div>
+    <button class="btn btn-rosa" style="width:100%" type="submit" id="irPagar">Ir a pagar · ${bs(totalCarrito())}</button>
+  </form>`);
+  // "Ir a pagar" queda bloqueado hasta que el celular sea un número boliviano válido
+  const cel = $("#formDatos [name=celular]"), btn = $("#irPagar");
+  const revisarCel = () => {
+    const ok = !!celularBoliviano(cel.value);
+    btn.disabled = !ok;
+    $("#ayudaCel").classList.toggle("bien", ok);
+    $("#ayudaCel").textContent = ok ? "✓ Número correcto" : "";
+  };
+  cel.addEventListener("input", revisarCel); revisarCel();
+  // Si recoge en la tienda no hace falta ciudad ni dirección
+  const aplicarEntrega = () => {
+    const tienda = $("#formDatos [name=entrega]:checked").value === "Recoger en la tienda";
+    $("#campoCiudad").hidden = tienda; $("#campoDireccion").hidden = tienda; $("#avisoTienda").hidden = !tienda;
+    $("#formDatos [name=ciudad]").required = !tienda; $("#formDatos [name=direccion]").required = !tienda;
+  };
+  $("#formDatos").querySelectorAll("[name=entrega]").forEach(r => r.addEventListener("change", aplicarEntrega)); aplicarEntrega();
+  $("#formDatos").addEventListener("submit", e => {
+    e.preventDefault();
+    const f = e.target, datos = Object.fromEntries(new FormData(f));
+    if (datos.entrega === "Recoger en la tienda") { datos.ciudad = "Santa Cruz"; datos.direccion = "Recoge en la tienda"; }
+    let ok = true;
+    f.querySelectorAll("[required]").forEach(el => {
+      const malo = !el.value.trim() || (el.type === "email" && !/^\S+@\S+\.\S+$/.test(el.value)) || (el.name === "celular" && !celularBoliviano(el.value));
+      el.closest(".campo").classList.toggle("error", malo); if (malo) ok = false;
+    });
+    if (!ok) { aviso("Revisá los datos marcados 🙏🏼"); return; }
+    datos.celular = celularBoliviano(datos.celular);
+    cliente = datos; guardar("lr_cliente", cliente);
+    // Al tocar "Ir a pagar" sus datos ya quedan en el CRM, aunque después no termine la compra
+    registrarPedido("Sin finalizar");
+    pasoPago();
+  });
+}
+
+function pasoPago() {
+  const items = itemsCarrito(), total = totalCarrito();
+  abrirModal(`<div class="checkout">
+    <div class="pasos"><span class="on"></span><span class="on"></span></div>
+    <h2>📱 Pagá con QR</h2>
+    <p class="sub">Escaneá desde la app de tu banco.</p>
+    <div class="resumen">
+      ${items.map(i => `<div><span>${i.cant} × ${esc(i.p.nombre)}</span><span>${bs(precioFinal(i.p) * i.cant)}</span></div>`).join("")}
+      ${fiestaActiva() ? `<div><span>🎉 Descuento del modo fiesta</span><span>${fiesta.pct}%</span></div>` : ""}
+      <div>${cliente.entrega === "Recoger en la tienda" ? `<span>Recoges en la tienda</span><span>sin costo</span>` : `<span>Envío a ${esc(cliente.ciudad)}</span><span>a coordinar</span>`}</div>
+      <div class="tot"><span>Total</span><span>${bs(total)}</span></div>
+    </div>
+    <div class="qr"><img src="${CONFIG.QR_IMG}" referrerpolicy="no-referrer" alt="QR de pago" onerror="this.outerHTML='<div class=sinqr>Acá va el QR de cobro de Little Rabbit</div>'"></div>
+    <ol class="pasos-pago">
+      <li>Escaneá el QR y pagá ${bs(total)}.</li>
+      <li>Tocá el botón verde y mandanos el comprobante por WhatsApp.</li>
+      <li>¡Listo! Te confirmamos el envío. 🐰</li>
+    </ol>
+    <button class="btn btn-wpp" style="width:100%" data-enviar>${ICONO_WPP} Enviar pedido por WhatsApp</button>
+    <button class="volver" data-volver>← Cambiar mis datos</button>
+  </div>`);
+}
+
+// Anota (o actualiza) el pedido en el CRM: N8N → Google Sheet. Mismo código = misma fila.
+function registrarPedido(estado) {
+  if (!CONFIG.WEBHOOK_PEDIDOS) return;
+  const items = itemsCarrito();
+  const datos = new URLSearchParams({
+    fecha: new Date().toISOString(), nombre: cliente.nombre, celular: cliente.celular,
+    entrega: cliente.entrega, ciudad: cliente.ciudad, direccion: cliente.direccion, nota: cliente.nota || "",
+    productos: items.map(i => `${i.cant} x ${i.p.nombre}`).join(" | "), total: String(totalCarrito()), estado,
+    descuento: fiestaActiva() ? `${fiesta.pct}%` : ""
+  });
+  fetch(CONFIG.WEBHOOK_PEDIDOS, { method: "POST", body: datos, mode: "no-cors", keepalive: true }).catch(() => {});
+}
+
+function enviarPedido() {
+  const items = itemsCarrito(), total = totalCarrito();
+  const productosTxt = items.map(i => `${i.cant} × ${i.p.nombre} (${bs(precioFinal(i.p) * i.cant)})`).join("\n");
+  const msj = `¡Hola Little Rabbit! 🐰 Quiero hacer este pedido:\n\n🧾 *Pedido nuevo*\n${productosTxt}\n${fiestaActiva() ? `\n🎉 Con mi descuento del modo fiesta: ${fiesta.pct}%\n` : ""}\n💰 *Total: ${bs(total)}*\n\n👤 ${cliente.nombre}\n${cliente.entrega === "Recoger en la tienda" ? "🏪 Recoge en la tienda" : `🚚 Envío: ${cliente.ciudad} – ${cliente.direccion}`}\n📱 ${cliente.celular}${cliente.nota ? `\n📝 ${cliente.nota}` : ""}\n\nYa pagué con QR, te mando el comprobante 👇🏼`;
+
+  // 1) Se abre WhatsApp primero (si no, el celular bloquea la ventana)
+  window.open(linkWpp(msj), "_blank");
+
+  // 2) El pedido que entró como "Sin finalizar" pasa a "Esperando comprobante"
+  registrarPedido("Esperando comprobante");
+
+  carrito = []; guardar("lr_carrito", carrito); pintarCarrito();
+  abrirModal(`<div class="gracias"><div class="grande"><img src="img/logo.png" alt="Little Rabbit"></div><h2>¡Gracias, ${esc(cliente.nombre)} 💗!</h2>
+    <p class="sub" style="margin:10px 0 22px">Tu pedido ya está siendo procesado. Mandanos el comprobante y ${cliente.entrega === "Recoger en la tienda" ? "te avisamos cuando esté listo para recoger" : "te confirmamos el envío"}.</p>
+    <a class="btn btn-wpp" href="${linkWpp(msj)}" target="_blank" rel="noopener">${ICONO_WPP} Abrir WhatsApp de nuevo</a>
+    <button class="volver" data-cerrar>Seguir mirando juguetes</button></div>`);
+}
+
+// ============ RUTAS (subpáginas) ============
+let enInicio = false;
+function marcarMenu(r) { document.querySelectorAll("#menu a").forEach(a => a.classList.toggle("activo", a.dataset.ruta === r)); }
+// en la página principal, el menú marca la sección que se está viendo
+function spy() {
+  if (!enInicio) return;
+  let r = "inicio";
+  for (const [id, k] of [["ofertas-del-mes", "ofertas"], ["por-edad", "por-edad"], ["categorias", "categorias"], ["libros", "libros"], ["legos", "legos"], ["sobre-mi", "sobre-mi"]]) {
+    const el = document.getElementById(id); if (!el) continue;
+    const b = el.getBoundingClientRect();
+    if (b.top <= 170 && b.bottom > 90) r = k;
+  }
+  marcarMenu(r);
+}
+window.addEventListener("scroll", spy, { passive: true });
+
+function router() {
+  const h = location.hash;
+  if (h.length > 1 && !h.startsWith("#/")) { // anclas dentro del inicio (#ofertas-del-mes, #por-edad)
+    if (!document.querySelector(h)) {
+      $("#app").innerHTML = vistaInicio();
+      const ir = () => { const el = document.querySelector(h); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 110, behavior: "instant" }); };
+      ir(); setTimeout(ir, 300); // otra vez cuando ya cargaron las imágenes de arriba
+    }
+    enInicio = true; spy();
+    return;
+  }
+  const ruta = h.replace(/^#\/?/, "");
+  const q = $("#buscar").value.trim();
+  let html, activa = "inicio";
+  if (ruta === "ofertas") { activa = "ofertas"; html = vistaLista("🎁 Ofertas del mes", "Precios especiales por tiempo limitado.", ofertas(), "e03"); }
+  else if (ruta.startsWith("edad/8-12")) { activa = "8-12"; html = vistaLegos(ruta.slice(10)); }
+  else if (ruta.startsWith("edad/")) { const k = ruta.slice(5), e = EDADES[k]; activa = k; html = e ? vistaLista("🐰 " + e.titulo, e.frase, PRODUCTOS.filter(p => p.edad === k && !LIBROS[p.libro]), e.clase) : vistaInicio(); }
+  else if (ruta.startsWith("categoria/")) { const k = ruta.slice(10), c = CATEGORIAS[k]; activa = ""; html = c ? vistaLista(`${c.emoji} ${c.titulo}`, c.frase, PRODUCTOS.filter(p => p.categorias.includes(k)), "e46") : vistaInicio(); }
+  else if (ruta.startsWith("libros/")) { const k = ruta.slice(7), l = LIBROS[k]; activa = ""; html = l ? vistaLista(`${l.emoji} Libros · ${l.titulo}`, l.frase, PRODUCTOS.filter(p => p.libro === k), l.clase, "Pronto vas a encontrar libros acá 📚") : vistaInicio(); }
+  else if (ruta === "sobre-mi") { activa = "sobre-mi"; html = vistaSobreMi(); }
+  else if (ruta === "fiesta") { activa = ""; html = vistaFiesta(); }
+  else if (ruta === "todos") { activa = "todos"; html = vistaLista("🧸 Todo nuestro catálogo", "Acá encontrarás todo lo que necesitas: juguetes, libros y mucho más.", PRODUCTOS, "e46"); }
+  else if (ruta === "buscar") { activa = ""; html = vistaLista(`🔎 "${esc(q)}"`, "Resultados de tu búsqueda.", buscar(q), "e46", "No encontramos nada con esa búsqueda. Probá con otra palabra 🐰"); }
+  else html = vistaInicio();
+  $("#app").innerHTML = html;
+  enInicio = activa === "inicio";
+  window.scrollTo(0, 0);
+  enInicio ? spy() : marcarMenu(activa);
+}
+
+// ============ EVENTOS ============
+document.addEventListener("click", e => {
+  const mini = e.target.closest(".mini");
+  if (mini) {
+    $("#fotoGrande").src = mini.dataset.foto;
+    document.querySelectorAll(".mini").forEach(m => m.classList.toggle("activa", m === mini));
+    return;
+  }
+  const t = e.target.closest("[data-agregar],[data-ver],[data-mas],[data-menos],[data-quitar],[data-cerrar],[data-checkout],[data-enviar],[data-volver],[data-wpp-general],[data-fiesta]");
+  if (!t) return;
+  const d = t.dataset;
+  if (d.fiesta) cambiarPct(Number(d.fiesta));
+  else if (d.agregar) agregar(d.agregar);
+  else if (d.ver) abrirModal(vistaProducto(porId(d.ver)));
+  else if (d.mas) cambiar(d.mas, 1);
+  else if (d.menos) cambiar(d.menos, -1);
+  else if (d.quitar) cambiar(d.quitar, -999);
+  else if ("checkout" in d) pasoDatos();
+  else if ("enviar" in d) enviarPedido();
+  else if ("volver" in d) pasoDatos();
+  else if ("wppGeneral" in d) { e.preventDefault(); window.open(linkWpp("¡Hola Little Rabbit! 🐰 Quiero hacer una consulta."), "_blank"); }
+  else if ("cerrar" in d) cerrarTodo();
+});
+$("#abrirCarrito").addEventListener("click", abrirCarrito);
+$("#capa").addEventListener("click", cerrarTodo);
+$("#modal").addEventListener("click", e => { if (e.target.id === "modal") cerrarTodo(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") cerrarTodo(); });
+let tBuscar;
+$("#buscar").addEventListener("input", e => {
+  clearTimeout(tBuscar);
+  tBuscar = setTimeout(() => { if (e.target.value.trim()) { location.hash === "#/buscar" ? router() : (location.hash = "#/buscar"); } else location.hash = "#/"; }, 250);
+});
+window.addEventListener("hashchange", router);
+
+$(".wpp-flot").innerHTML = ICONO_WPP;
+document.querySelectorAll("[data-icono]").forEach(a => a.insertAdjacentHTML("afterbegin", a.dataset.icono === "ig" ? ICONO_IG : ICONO_FB));
+cargarProductos().then(() => {
+  pintarCarrito(); router(); aplicarFiesta();
+  // si el tiempo se terminó mientras no estaba en la página, se avisa una vez
+  if (fiesta && !fiesta.vencida && fiesta.fin && !fiestaActiva()) terminarFiesta();
+});
+</script>
+</body>
+</html>
