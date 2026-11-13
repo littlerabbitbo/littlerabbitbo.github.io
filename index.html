@@ -333,7 +333,7 @@ footer{background:#fff;border-top:1px solid var(--linea);padding:44px 0 90px;mar
   <div class="wrap">
     <div class="head">
       <a href="#/" class="logo" aria-label="Little Rabbit, inicio">
-        <img src="img/logo.png" alt="Logo de Little Rabbit">
+        <img class="img-logo" src="img/logo.png" referrerpolicy="no-referrer" alt="Logo de Little Rabbit">
         <b><span>Little</span><em>Rabbit</em></b>
       </a>
       <label class="buscar">
@@ -363,7 +363,7 @@ footer{background:#fff;border-top:1px solid var(--linea);padding:44px 0 90px;mar
 <footer>
   <div class="wrap pie">
     <div>
-      <a href="#/" class="logo" style="margin-bottom:12px"><img src="img/logo.png" alt=""><b><span>Little</span><em>Rabbit</em></b></a>
+      <a href="#/" class="logo" style="margin-bottom:12px"><img class="img-logo" src="img/logo.png" referrerpolicy="no-referrer" alt=""><b><span>Little</span><em>Rabbit</em></b></a>
       <p>Juegos que despiertan la curiosidad, la imaginación y las ganas de aprender de tus peques, en cada etapa.</p>
     </div>
     <div>
@@ -405,6 +405,7 @@ const CONFIG = {
   QR_IMG: "img/qr.jpg",             // imagen del QR de cobro de Brunella
   BANNER: "img/banner-preventa-navidena.jpg",
   FOTO_BRUNELLA: "img/brunella.jpg", // Brunella con sus hijos
+  LOGO: "img/logo.png",
   INSTAGRAM: "https://www.instagram.com/little.rabbit.bo",
   FACEBOOK: "https://www.facebook.com/Little.rabbit.bolivia",
   TIENDA: "Calle Sucre esquina Cobija, Centro, Santa Cruz",
@@ -483,10 +484,11 @@ async function cargarProductos() {
       }
     } catch (e) {}
   }
-  // Pestaña "Imágenes de la web" del Sheet: Portada, QR y Foto de Brunella reemplazan las de siempre (si tienen enlace)
+  // Pestaña "Imágenes de la web" del Sheet: Portada, QR, Foto de Brunella y Logo reemplazan las de siempre (si tienen enlace)
   if (imagenes.portada) CONFIG.BANNER = fotoDirecta(imagenes.portada);
   if (imagenes.qr) CONFIG.QR_IMG = fotoDirecta(imagenes.qr);
   if (imagenes.foto_de_brunella) CONFIG.FOTO_BRUNELLA = fotoDirecta(imagenes.foto_de_brunella);
+  if (imagenes.logo) { CONFIG.LOGO = fotoDirecta(imagenes.logo); document.querySelectorAll("img.img-logo").forEach(i => { i.src = CONFIG.LOGO; }); }
   // Los títulos del Sheet ("ID", "Precio antes", "Descripción") pasan a claves simples (id, precio_antes, descripcion)
   const clave = k => k.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, "_");
   PRODUCTOS = lista
@@ -595,7 +597,7 @@ function vistaFiesta() {
   return `<div class="wrap"><form class="checkout fiesta-pagina" id="formFiesta" novalidate>
     <div class="grande">🎁</div>
     <h2>¡Tenemos una sorpresa para vos!</h2>
-    <p class="sub">Gracias por tu compra 💗 Por ser cliente de Little Rabbit tenés ${CONFIG.FIESTA_MINUTOS} minutos con el descuento que vos elijas, hasta ${CONFIG.FIESTA_MAX}%.</p>
+    <p class="sub">💗 Gracias por tu compra y por ser cliente de Little Rabbit.</p>
     <div class="campo"><label>Tu celular (el mismo de tu pedido)</label><input name="celular" required inputmode="tel" maxlength="16" value="${esc(cliente.celular || "")}">
       <small class="ayuda" id="ayudaFiesta"></small></div>
     <button class="btn btn-rosa" style="width:100%" type="submit">🎉 Activar mi sorpresa</button>
@@ -613,7 +615,7 @@ document.addEventListener("submit", async e => {
     const r = await verificarFiesta(cel);
     if (r.ok) activarFiesta(cel, r);
     else if (r.motivo === "vencida") { fiesta = { celular: cel, fin: 0, pct: 0, vencida: true }; guardar("lr_fiesta", fiesta); mostrarVencida(); }
-    else ay.textContent = "Todavía no vemos tu pago confirmado. Si ya mandaste el comprobante, esperá un ratito a que lo revisemos 🐰";
+    else ay.textContent = "Todavía no vemos tu pago confirmado. Si ya mandaste el comprobante, espera un momento a que lo revisemos 🐰";
   } catch (err) { ay.textContent = "No pudimos revisar tu pedido ahora. Probá de nuevo en un momento."; }
 });
 
@@ -987,7 +989,7 @@ function enviarPedido() {
   registrarPedido("Esperando comprobante");
 
   carrito = []; guardar("lr_carrito", carrito); pintarCarrito();
-  abrirModal(`<div class="gracias"><div class="grande"><img src="img/logo.png" alt="Little Rabbit"></div><h2>¡Gracias, ${esc(cliente.nombre)} 💗!</h2>
+  abrirModal(`<div class="gracias"><div class="grande"><img src="${CONFIG.LOGO}" referrerpolicy="no-referrer" alt="Little Rabbit"></div><h2>¡Gracias, ${esc(cliente.nombre)} 💗!</h2>
     <p class="sub" style="margin:10px 0 22px">Tu pedido ya está siendo procesado. Mandanos el comprobante y ${cliente.entrega === "Recoger en la tienda" ? "te avisamos cuando esté listo para recoger" : "te confirmamos el envío"}.</p>
     <a class="btn btn-wpp" href="${linkWpp(msj)}" target="_blank" rel="noopener">${ICONO_WPP} Abrir WhatsApp de nuevo</a>
     <button class="volver" data-cerrar>Seguir mirando juguetes</button></div>`);
