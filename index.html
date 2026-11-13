@@ -166,8 +166,8 @@ section{padding:56px 0;scroll-margin-top:110px}
 .sobre-completa{align-items:start}
 .sobre-completa .sobre-foto{position:sticky;top:150px}
 .volver{display:inline-block;margin:18px 0 8px;color:var(--suave);font-weight:600}
-.sobre-foto{aspect-ratio:1;border-radius:50%;overflow:hidden;border:8px solid var(--rosa-claro);max-width:360px;justify-self:center;width:100%;background:#fff}
-.sobre-foto img{width:100%;height:100%;object-fit:cover}
+.sobre-foto{aspect-ratio:4/5;border-radius:32px;overflow:hidden;border:8px solid var(--rosa-claro);max-width:360px;justify-self:center;width:100%;background:#fff}
+.sobre-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 20%} /* foto vertical: que se vean Brunella y sus dos hijos */
 .ubicacion{display:flex;gap:12px;align-items:center;margin:8px 0 18px;max-width:460px}
 .ubi-icono{flex:none;font-size:1.6rem;line-height:1}
 .ubicacion div{display:flex;flex-direction:column;line-height:1.3;min-width:0}
@@ -177,7 +177,7 @@ section{padding:56px 0;scroll-margin-top:110px}
 .tienda-foto.vacia{display:grid;place-content:center;text-align:center;color:var(--suave);font-weight:700;line-height:1.8}
 .tienda-foto.vacia span{font-size:1.05rem}
 /* mientras no esté la foto de Brunella va el logo, a su tamaño real para que no se pixele */
-.sobre-foto.es-logo{border:0;background:none;max-width:280px;box-shadow:var(--sombra)}
+.sobre-foto.es-logo{aspect-ratio:1;border-radius:50%;border:0;background:none;max-width:280px;box-shadow:var(--sombra)}
 .sobre-foto.es-logo img{object-fit:contain}
 .sobre h2{font-size:clamp(1.8rem,3.6vw,2.5rem);margin-bottom:14px}
 .sobre p{color:var(--suave);font-size:1.08rem;margin-bottom:12px;max-width:620px}
